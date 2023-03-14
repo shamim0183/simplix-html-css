@@ -1,0 +1,87 @@
+@media (max-width: 1350px) {
+  .login .login_img .login_title {
+    display: none;
+  }
+  .attendance_table {
+    overflow-x: scroll;
+  }
+  .employee_table {
+    overflow-x: scroll;
+  }
+}
+.calender_btn {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .calender_btn {
+    display: block;
+  }
+  .modal_calender {
+    display: block;
+  }
+  .attendance_calender {
+    display: none;
+  }
+  .attendance_table .table {
+    width: 1200px;
+  }
+  .employee_table .table {
+    width: 1200px;
+  }
+  .attendance_right {
+    margin-right: 0;
+  }
+  .wrapper .sidebar {
+    left: -400px;
+  }
+  .wrapper .sidebar.active {
+    left: 0px;
+  }
+  .wrapper .sidebar .logo .close_btn {
+    display: block;
+  }
+  .wrapper .main_section {
+    width: 100%;
+    left: 0;
+  }
+  .main_header .header_section .header_left .toggle {
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 991px) {
+  .attendance_left {
+    margin-bottom: 20px;
+  }
+  .login .login_form {
+    margin-left: 0px;
+    padding: 50px 30px;
+    margin-top: 50px;
+    min-width: 100%;
+  }
+  .attendance_middle {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .employee_wrapper .nav-item {
+    margin-left: 0 !important;
+    margin-bottom: 10px;
+  }
+  .title h3 {
+    font-size: 24px;
+  }
+  .modal-content {
+    margin: 0 20px;
+  }
+  .modal_profile {
+    padding: 30px 20px 0px;
+  }
+}
+@media (max-width: 576px) {
+  .time_count {
+    min-width: 100%;
+  }
+}

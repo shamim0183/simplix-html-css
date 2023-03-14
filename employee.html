@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- GOOGLE ICON -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- Date Picker Css -->
+    <link rel="stylesheet" href="assets/css/date-picker.css">
+
+    <!-- BOOTSTRAP STYLESHEET -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+
+    <!-- CUSTOME STYLESHEET -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+</head>
+
+<body class="primary-bg-color">
+    <div class="wrapper">
+        <!-- SIDEBAR SECTION START -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="./assets/image/Simplix-Logo.png" alt="simplix-logo" class="img-fluid">
+                <div class="close_btn">
+                    <span class="material-symbols-rounded">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div class="menu menu--disabled">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="material-symbols-rounded">
+                                home
+                            </span>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="employee.html">
+                            <span class="material-symbols-rounded">
+                                group
+                            </span>Employees</a>
+                    </li>
+                    <li>
+                        <a href="attendance.html">
+                            <span class="material-symbols-rounded">
+                                schedule
+                            </span>Attendance
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-symbols-rounded">
+                            event_busy
+                        </span>Holiday Setup</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-symbols-rounded">
+                            person
+                        </span>Admins</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-symbols-rounded">
+                                settings
+                            </span>Payroll Options</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar_copywrite text-center">
+                <p>© Simplix Payroll 2021</p>
+            </div>
+        </aside>
+        <!-- SIDEBAR SECTION END -->
+
+        <!-- MAIN SECTION START -->
+        <main class="main_section">
+            <div class="main_header">
+                <header class="header_section">
+                    <div class="header_left">
+                        <span class="material-symbols-rounded toggle">
+                            menu
+                        </span>
+                    </div>
+                    <div class="header_right">
+                        <div class="profile">
+                            <div class="profile_img">
+                                <img class="img-fluid" src="./assets/image/malepic.png" alt="person">
+                            </div>
+                            <div class="profile_author">
+                                <h3>Guy Hawkins</h3>
+                                <p>UX Designer</p>
+                            </div>
+                            <div class="dropdown ">
+                                <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="profile.html">Profile
+                                            <span class="material-symbols-rounded">
+                                                person
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">logout
+                                            <span class="material-symbols-rounded">
+                                                logout
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="main_body mt-40">
+                <div class="middle_part">
+                    <div class="mb-40 d-flex align-items-sm-center justify-content-between flex-sm-row flex-column gap-sm-0 gap-4 ">
+                        <div class="title">
+                            <h3 class="arrow_icon">
+                                Employee Payslip (50)
+                            </h3>
+                        </div>
+                        <div class="download_option">
+                            <a class="blue_btn download d-flex align-items-center" href="#">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="table_part">
+                    <div class="employee_wrapper position-relative">
+                        <div class=" mark_btn d-flex align-items-center form-check form-check-inline me-0">
+                            <input class="checkbox_mark mr-8 mt-0" type="checkbox" id="chk_red" checked>
+                            <label class="form-check-label" for="chk_red">Mark as Done</label>
+                        </div>
+                        <ul class="nav nav-pills mb-24 position-relative flex-md-row flex-column" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Current Month</button>
+                                    <div class="border_custom"></div>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Previous Month</button>
+                                    <div class="border_custom"></div>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Custom Month</button>
+                                    <div class="border_custom"></div>
+                            </li>
+                            <li class="nav_border"></li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="salary_title secondary-text-color">
+                                    <h2>Salary for the month of April</h2>
+                                </div>
+                                <div class="employee_table">
+                                    <table class="table">
+                                        <tbody >
+                                            <tr class="table_list th_border">
+                                                <th >
+                                                    <div class="checkbox d-flex align-items-center">
+                                                        <input class="checkbox_mark mr-22" type="checkbox">
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    Employee Name
+                                                </th>
+                                                <th>
+                                                    National Registration #
+                                                </th>
+                                                <th>
+                                                    Payment Frequency
+                                                </th>
+                                                <th>
+                                                    Salary Amount
+                                                </th>
+                                                <th>
+                                                    Payment Status
+                                                </th>
+                                                <th></th>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 orange-text-color">
+                                                    Pending
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 orange-text-color">
+                                                    Pending
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 orange-text-color">
+                                                    Pending
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 orange-text-color">
+                                                    Pending
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 orange-text-color">
+                                                    Pending
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 orange-text-color">
+                                                    Pending
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 orange-text-color">
+                                                    Pending
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 orange-text-color">
+                                                    Pending
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 orange-text-color">
+                                                    Pending
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 orange-text-color">
+                                                    Pending
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                <div class="salary_title secondary-text-color">
+                                    <h2>Salary for the month of March</h2>
+                                </div>
+                                <div class="employee_table">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr class="table_list th_border">
+                                                <th>
+                                                    <div class="checkbox d-flex align-items-center">
+                                                        <input class="checkbox_mark mr-22" type="checkbox">
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    Employee Name
+                                                </th>
+                                                <th>
+                                                    National Registration #
+                                                </th>
+                                                <th>
+                                                    Payment Frequency
+                                                </th>
+                                                <th>
+                                                    Salary Amount
+                                                </th>
+                                                <th>
+                                                    Payment Status
+                                                </th>
+                                                <th>
+                                                    Payslip
+                                                </th>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 green-text-color">
+                                                    Paid
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 green-text-color">
+                                                    Paid
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 green-text-color">
+                                                    Paid
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 green-text-color">
+                                                    Paid
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 green-text-color">
+                                                    Paid
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 green-text-color">
+                                                    Paid
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 green-text-color">
+                                                    Paid
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 green-text-color">
+                                                    Paid
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 green-text-color">
+                                                    Paid
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="table_list ">
+                                                <td class="pt-20">
+                                                    <div class="checkbox">
+                                                        <input class="checkbox_mark" type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    <div class="d-flex align-items-center">
+                                                        <img class="mr-12" src="./assets/image/male.png" alt="male">
+                                                        Wade Warren
+                                                    </div>
+                                                </td>
+                                                <td class="pt-20">
+                                                    738
+                                                </td>
+                                                <td class="pt-20">
+                                                    Monthly
+                                                </td>
+                                                <td class="pt-20">
+                                                    BDs$ 2,000
+                                                </td>
+                                                <td class="pt-20 green-text-color">
+                                                    Paid
+                                                </td>
+                                                <td class="pt-20 text-end">
+                                                    <a href="#" class="blue_btn view ">View</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                <div class="salary_title secondary-text-color">
+                                <form>
+                                        <div class="date_picker d-inline-block mr-24 mb-4">
+                                            <label for="time">Timeframe</label>
+                                            <input class="form-control date_icon v-form" type="date" id="time">
+                                        </div>
+                                        <button type="submit" class="blue_btn submit_btn">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div id="employee-pagination" class="d-flex justify-content-center mb-25">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link pagination_arrow" href="#">
+                                        <span class="material-symbols-rounded secondary-text-color ">
+                                            keyboard_arrow_left
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link bg-transparent" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link bg-transparent" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link bg-transparent" href="#">...</a></li>
+                                <li class="page-item"><a class="page-link bg-transparent" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link pagination_arrow" href="#">
+                                        <span class="material-symbols-rounded secondary-text-color ">
+                                            keyboard_arrow_right
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- MAIN SECTION END -->
+    </div>
+    <!-- Jquery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <!-- Date picker js -->
+    <script src="assets/js/date-picker.js"></script>
+
+    
+    <!-- POPPER JS -->
+    <script src="./assets/js/popper.js"></script>
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- GOOGLE ICON -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- Date Picker Css -->
+    <link rel="stylesheet" href="assets/css/date-picker.css">
+
+    <!-- BOOTSTRAP STYLESHEET -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+
+    <!-- CUSTOME STYLESHEET -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+</head>
+
+<body class="primary-bg-color">
+    <div class="wrapper">
+        <!-- SIDEBAR SECTION START -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="./assets/image/Simplix-Logo.png" alt="simplix-logo" class="img-fluid">
+                <div class="close_btn">
+                    <span class="material-symbols-rounded">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div class="menu menu--disabled vh-100">
+                <ul>
+                    <li>
+                        <a href="profile.html">
+                            <span class="material-symbols-rounded">
+                                person
+                            </span>Profile</a>
+                    </li>
+                    <li>
+                        <a href="employee.html">
+                            <span class="material-symbols-rounded">
+                                attach_file
+                            </span>Employee Payslip</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-symbols-rounded">
+                                schedule
+                            </span>Attendance
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="material-symbols-rounded">
+                            flag
+                        </span>Support</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar_copywrite text-center">
+                <p>© Simplix Payroll 2021</p>
+            </div>
+        </aside>
+        <!-- SIDEBAR SECTION END -->
+
+        <!-- MAIN SECTION START -->
+        <main class="main_section">
+            <div class="main_header">
+                <header class="header_section">
+                    <div class="header_left">
+                        <span class="material-symbols-rounded toggle">
+                            menu
+                        </span>
+                    </div>
+                    <div class="header_right">
+                        <div class="profile">
+                            <div class="profile_img">
+                                <img class="img-fluid" src="assets/image/malepic.png" alt="person">
+                            </div>
+                            <div class="profile_author">
+                                <h3>Guy Hawkins</h3>
+                                <p>UX Designer</p>                                
+                            </div>
+                            <div class="dropdown ">
+                                <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                </a>
+                            
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="profile.html">Profile
+                                            <span class="material-symbols-rounded">
+                                                person
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">logout
+                                            <span class="material-symbols-rounded">
+                                                logout
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="main_body mt-24">
+                <div class="mb-40 d-flex align-items-center justify-content-between">
+                    <div class="title">
+                        <h3 class="arrow_icon">
+                            Attendance
+                        </h3>
+                    </div>
+                    <div class="attendance_calender">
+                        <form >
+                            <div class="d-flex gap-12">
+                                <div class="date_picker">
+                                    <label for="form-date">Form</label>
+                                    <input class="form-control date_icon v-form" type="date" id="one-date">
+                                </div>
+                                <div class="date_picker">
+                                    <label for="to-date">To</label>
+                                    <input class="form-control date_icon v-form" type="date" id="two-date">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- MODAL START -->
+                    <!-- Button trigger modal -->
+                    <button type="button" class="bg-transparent calender_btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="./assets/image/calender.svg" alt="">
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered mx-0 mx-auto">
+                            <div class="modal-content mx-24 br-24">
+                                <div class="modal-body">
+                                    <div class=" modal_calender">
+                                        <form>
+                                            <div class="d-flex flex-sm-row flex-column gap-12">
+                                                <div class="form_date">
+                                                    <label for="form-date">Form</label>
+                                                    <input class="form-control date_icon v-form" type="date" id="form-date">
+                                                </div>
+                                                <div class="form_date">
+                                                    <label for="to-date">To</label>
+                                                    <input class="form-control date_icon v-form" type="date" id="to-date">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MODAL END -->
+                </div>
+                <div class="attendance_middle mb-40">
+                    <div class="attendance_left">
+                        <div class="user_details ">
+                            <div class="mb-12">
+                                <div class="d-flex gap-20 mb-17 flex-sm-row flex-column">
+                                    <div class="user_name"><p><span>Name:</span> Guy Hawkins</p>
+                                    </div>
+                                    <div class="user_reg">
+                                        <p><span>National Registration:</span> UX0190219-AX</p>
+                                    </div>
+                                </div>
+                                <span >Today</span>
+                            </div>
+                            <div class="time d-flex gap-30 flex-sm-row flex-column">
+                                <div class="check_in">
+                                    <span class="d-block mb-16">-</span>
+                                    <button class="green_btn">Check-in</button>
+                                </div>
+                                <div class="check_out">
+                                    <span class="d-block mb-16">-</span>
+                                    <button class="red_btn" disabled>Check-in</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attendance_right mr-76">
+                        <div class="d-flex gap-20 text-center justify-content-md-center flex-md-row flex-column">
+                            <div class="time_count ">
+                                <span class="mb-13  d-inline-block">Working Days</span>
+                                <p class="secondary-text-color">20</p>
+                            </div>
+                            <div class="time_count">
+                                <span class="mb-13  d-inline-block">Leaves</span>
+                                <p class="third-text-color">0</p>
+                            </div>
+                            <div class="time_count ">
+                                <span class="mb-13 d-inline-block">Holidays</span>
+                                <p class="third-text-color">20</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="attendance_table">
+                    <table class="table">
+                        <tbody>
+                            <tr class="table_list green_shape">
+                                <td >
+                                    <h4>Date</h4>
+                                    <p> <img class="mr-10 img-fluid" src="./assets/image/calender.svg" alt="calender_icon"> 28th, Dec 2020, Saturday</p>
+                                    
+
+                                </td>
+                                <td >
+                                    <h4>Check-in Time</h4>
+                                    <p ><img class="mr-8 img-fluid" src="./assets/image/gree-man.svg" alt="gree-man"> 10:00 AM</p>
+
+                                </td>
+                                <td >
+                                    <h4>Check-out Time</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/red-man.svg" alt="red-man"> 07:25 PM</p>
+
+                                </td>
+                                <td >
+                                    <h4>Total Hours</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/time.svg" alt="time"> 9.25 hrs</p>
+
+                                </td>
+                                <td >
+                                    <h4>Holiday</h4>
+                                    <p>N/A</p>
+
+                                </td>
+                            </tr>
+                            <tr class="table_list green_shape">
+                                <td >
+                                    <h4>Date</h4>
+                                    <p> <img class="mr-10 img-fluid" src="./assets/image/calender.svg" alt="calender_icon"> 28th, Dec 2020, Saturday</p>
+                                    
+
+                                </td>
+                                <td >
+                                    <h4>Check-in Time</h4>
+                                    <p ><img class="mr-8 img-fluid" src="./assets/image/gree-man.svg" alt="gree-man"> 10:00 AM</p>
+
+                                </td>
+                                <td >
+                                    <h4>Check-out Time</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/red-man.svg" alt="red-man"> 07:25 PM</p>
+
+                                </td>
+                                <td >
+                                    <h4>Total Hours</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/time.svg" alt="time"> 9.25 hrs</p>
+
+                                </td>
+                                <td >
+                                    <h4>Holiday</h4>
+                                    <p>N/A</p>
+
+                                </td>
+                            </tr>
+                            <tr class="table_list red_shape">
+                                <td >
+                                    <h4>Date</h4>
+                                    <p> <img class="mr-10 img-fluid" src="./assets/image/calender.svg" alt="calender_icon"> 28th, Dec 2020, Saturday</p>
+                                    
+
+                                </td>
+                                <td >
+                                    <h4>Check-in Time</h4>
+                                    <p ><img class="mr-8 img-fluid" src="./assets/image/gree-man.svg" alt="gree-man"> 10:00 AM</p>
+
+                                </td>
+                                <td >
+                                    <h4>Check-out Time</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/red-man.svg" alt="red-man"> 07:25 PM</p>
+
+                                </td>
+                                <td >
+                                    <h4>Total Hours</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/time.svg" alt="time"> 9.25 hrs</p>
+
+                                </td>
+                                <td >
+                                    <h4>Holiday</h4>
+                                    <p>N/A</p>
+
+                                </td>
+                            </tr>
+                            <tr class="table_list red_shape">
+                                <td >
+                                    <h4>Date</h4>
+                                    <p> <img class="mr-10 img-fluid" src="./assets/image/calender.svg" alt="calender_icon"> 28th, Dec 2020, Saturday</p>
+                                    
+
+                                </td>
+                                <td >
+                                    <h4>Check-in Time</h4>
+                                    <p ><img class="mr-8 img-fluid" src="./assets/image/gree-man.svg" alt="gree-man"> 10:00 AM</p>
+
+                                </td>
+                                <td >
+                                    <h4>Check-out Time</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/red-man.svg" alt="red-man"> 07:25 PM</p>
+
+                                </td>
+                                <td >
+                                    <h4>Total Hours</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/time.svg" alt="time"> 9.25 hrs</p>
+
+                                </td>
+                                <td >
+                                    <h4>Holiday</h4>
+                                    <p>N/A</p>
+
+                                </td>
+                            </tr>
+                            <tr class="table_list green_shape">
+                                <td>
+                                    <h4>Date</h4>
+                                    <p> <img class="mr-10 img-fluid" src="./assets/image/calender.svg" alt="calender_icon"> 28th, Dec 2020, Saturday
+                                    </p>
+                            
+                            
+                                </td>
+                                <td>
+                                    <h4>Check-in Time</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/gree-man.svg" alt="gree-man"> 10:00 AM</p>
+                            
+                                </td>
+                                <td>
+                                    <h4>Check-out Time</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/red-man.svg" alt="red-man"> 07:25 PM</p>
+                            
+                                </td>
+                                <td>
+                                    <h4>Total Hours</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/time.svg" alt="time"> 9.25 hrs</p>
+                            
+                                </td>
+                                <td>
+                                    <h4>Holiday</h4>
+                                    <p>N/A</p>
+                            
+                                </td>
+                            </tr>
+                            <tr class="table_list green_shape">
+                                <td>
+                                    <h4>Date</h4>
+                                    <p> <img class="mr-10 img-fluid" src="./assets/image/calender.svg" alt="calender_icon"> 28th, Dec 2020, Saturday
+                                    </p>
+                            
+                            
+                                </td>
+                                <td>
+                                    <h4>Check-in Time</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/gree-man.svg" alt="gree-man"> 10:00 AM</p>
+                            
+                                </td>
+                                <td>
+                                    <h4>Check-out Time</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/red-man.svg" alt="red-man"> 07:25 PM</p>
+                            
+                                </td>
+                                <td>
+                                    <h4>Total Hours</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/time.svg" alt="time"> 9.25 hrs</p>
+                            
+                                </td>
+                                <td>
+                                    <h4>Holiday</h4>
+                                    <p>N/A</p>
+                            
+                                </td>
+                            </tr>
+                            <tr class="table_list green_shape">
+                                <td>
+                                    <h4>Date</h4>
+                                    <p> <img class="mr-10 img-fluid" src="./assets/image/calender.svg" alt="calender_icon"> 28th, Dec 2020, Saturday
+                                    </p>
+                            
+                            
+                                </td>
+                                <td>
+                                    <h4>Check-in Time</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/gree-man.svg" alt="gree-man"> 10:00 AM</p>
+                            
+                                </td>
+                                <td>
+                                    <h4>Check-out Time</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/red-man.svg" alt="red-man"> 07:25 PM</p>
+                            
+                                </td>
+                                <td>
+                                    <h4>Total Hours</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/time.svg" alt="time"> 9.25 hrs</p>
+                            
+                                </td>
+                                <td>
+                                    <h4>Holiday</h4>
+                                    <p>N/A</p>
+                            
+                                </td>
+                            </tr>
+                            <tr class="table_list green_shape">
+                                <td>
+                                    <h4>Date</h4>
+                                    <p> <img class="mr-10 img-fluid" src="./assets/image/calender.svg" alt="calender_icon"> 28th, Dec 2020, Saturday
+                                    </p>
+                            
+                            
+                                </td>
+                                <td>
+                                    <h4>Check-in Time</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/gree-man.svg" alt="gree-man"> 10:00 AM</p>
+                            
+                                </td>
+                                <td>
+                                    <h4>Check-out Time</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/red-man.svg" alt="red-man"> 07:25 PM</p>
+                            
+                                </td>
+                                <td>
+                                    <h4>Total Hours</h4>
+                                    <p><img class="mr-8 img-fluid" src="./assets/image/time.svg" alt="time"> 9.25 hrs</p>
+                            
+                                </td>
+                                <td>
+                                    <h4>Holiday</h4>
+                                    <p>N/A</p>
+                            
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </main>
+        <!-- MAIN SECTION END -->
+    </div>
+    <!-- Jquery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <!-- Date picker js -->
+    <script src="assets/js/date-picker.js"></script>
+
+    
+    <!-- POPPER JS -->
+    <script src="./assets/js/popper.js"></script>
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

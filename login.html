@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP STYLESHEET -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+
+    <!-- CUSTOME STYLESHEET -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+</head>
+<body class="darkblue_bg">
+    <main class="login_section d-flex justify-content-center align-items-lg-center">
+        <div class="container my-auto">
+            <div class="login py-lg-0 py-5">
+                <div class="align-items-center justify-content-center d-lg-flex">
+                    <div class="login_img mx-lg-0 mx-auto">
+                        <img src="./assets/image/group-photo.png" alt="simplix" class="img-fluid">
+                        <div class="login_title">
+                            <h2>
+                                payroll <br> 
+                                made <br> 
+                                simple
+                            </h2>
+                        </div>                   
+                    </div>
+                    <form>
+                        <div class="login_form">
+                            <div class="login_logo d-flex justify-content-center mb-40">
+                                <img src="./assets/image/Simplix-Logo.png" alt="simplix-logo" class="img-fluid">
+                            </div>
+                            <h3 class="mb-30">Welcome back!</h3>
+                            <div class="change_password">
+                                <div class="floating_field"> 
+                                    <input  type="text" id="email" placeholder="guy@smlxl.com">
+                                    <label for="email">Email/National Registration</label>
+                                </div>
+                                <div class="floating_field eye_btn">
+                                    <input type="password" id="password" placeholder="***********">
+                                    <button type="button" class="show_pass"></button>
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                            <div class="forgot d-flex justify-content-end mb-30">
+                                <a href="#">Forgot your password?</a>
+                            </div>
+                            <div class="login_submit">
+                                <button class="blue_btn d-block w-100">Log In</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Jquery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        
+            
+            // password show hide
+            var parent = document.querySelector(".change_password");
+
+            function showHide(input) {
+                if (input.getAttribute("type") === "password") {
+                    input.setAttribute("type", "text");
+                } else {
+                    input.setAttribute("type", "password");
+                }
+            }
+            parent.addEventListener("click", event => {
+                if (event.target.matches(".show_pass")) {
+                    var element1 = event.target;
+                    var element2 = element1.previousElementSibling;
+                    showHide(element2, element1);
+                }
+            });
+            $(".show_pass").click(function () {
+                $(this).toggleClass("eye_on");
+                var input = $($(this).attr("toggle"));
+            });
+                    // end password show hide
+        
+    </script>
+    <!-- BOOTSTRAP JAVASCRIPT -->
+   
+    <script src="./assets/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- GOOGLE ICON -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- BOOTSTRAP STYLESHEET -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Telephone CSS-->
+    <link rel="stylesheet" href="assets/css/intlTelInput.min.css">
+
+
+    <!-- CUSTOME STYLESHEET -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+</head>
+
+<body class="primary-bg-color">
+    <div class="wrapper">
+        <!-- SIDEBAR SECTION START -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="./assets/image/Simplix-Logo.png" alt="simplix-logo" class="img-fluid">
+                <div class="close_btn">
+                    <span class="material-symbols-rounded">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div class="menu menu--disabled vh-100">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="material-symbols-rounded">
+                                person
+                            </span>Profile</a>
+                    </li>
+                    <li>
+                        <a href="employee.html">
+                            <span class="material-symbols-rounded">
+                                attach_file
+                            </span>Employee Payslip</a>
+                    </li>
+                    <li>
+                        <a href="attendance.html">
+                            <span class="material-symbols-rounded">
+                                schedule
+                            </span>Attendance
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="material-symbols-rounded">
+                                flag
+                            </span>Support</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar_copywrite text-center">
+                <p>© Simplix Payroll 2021</p>
+            </div>
+        </aside>
+        <!-- SIDEBAR SECTION END -->
+
+        <!-- MAIN SECTION START -->
+        <main class="main_section">
+            <div class="main_header">
+                <header class="header_section">
+                    <div class="header_left">
+                        <span class="material-symbols-rounded toggle">
+                            menu
+                        </span>
+                    </div>
+                    <div class="header_right">
+                        <div class="profile">
+                            <div class="profile_img">
+                                <img class="img-fluid" src="assets/image/malepic.png" alt="person">
+                            </div>
+                            <div class="profile_author">
+                                <h3>Guy Hawkins</h3>
+                                <p>UX Designer</p>
+                            </div>
+                            <div class="dropdown ">
+                                <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="profile.html">Profile
+                                            <span class="material-symbols-rounded">
+                                                person
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">logout
+                                            <span class="material-symbols-rounded">
+                                                logout
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="main_body mt-40">
+                <div class="title mb-40">
+                    <h3 class="arrow_icon">
+                        User
+                    </h3>
+                </div>
+                <!-- MODAL START -->
+                <!-- Button trigger modal -->
+                <div class="user_profile">
+                    <div class="user_details_background">
+                        <div class="user_details_top text-center">
+                            <div class="user-img-upload mb-16 mx-auto">
+                                <input class="d-none" type="file"  id="upload-img" accept=".png, .jpg, .jpeg">
+                                <label class="upload-img" for="upload-img">Upload Image</label>
+                            </div>
+                            <div class="upload-details">
+                                <p>
+                                    Max 5 MB, jpg or jpeg or png
+                                    photo supported only.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+        
+                        <div class="user_details_bottom">
+                            <form>
+                                <div class="user-main-info">
+
+                                </div>
+                                <h3 class="mb-24">Main information</h3>
+                                <div class="edit-info">
+                                    <div class="row ">
+                                        <div class="col-md-4 col-12 gx-15">
+                                            <div class="floating_field">
+                                                <label for="first-name">First Name <span class="orange-text-color">*</span> </label>
+                                                <input class="form-control v-form" type="text" id="first-name" placeholder="Kinanthi">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12 gx-15">
+                                            <div class="floating_field">
+                                                <label for="middle-name">Middle Initials </label>
+                                                <input class="form-control v-form" type="text" id="middle-name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12 gx-15">
+                                            <div class="floating_field">
+                                                <label for="last-name">Last Name <span class="orange-text-color">*</span> </label>
+                                                <input class="form-control v-form" type="text" id="last-name" placeholder="Kinanthi">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12 gx-15">
+                                            <div class="floating_field">
+                                                <label >Gender <span class="orange-text-color">*</span></label>
+                                                <div class="custom-select">
+                                                    <select id="gender" class=" form-control v-form position-relative">
+                                                        <option>Male</option>
+                                                        <option>Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12 gx-15">
+                                            <div class="floating_field">
+                                                <label for="Date-Birth">Date of Birth </label>
+                                                <input class="form-control v-form" type="text" id="Date-Birth">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12 gx-15">
+                                            <div class="floating_field">
+                                                <label for="Nationality">Nationality</label>
+                                                    <select id="Nationality" class="form-control v-form position-relative">
+                                                        <option>Nationality</option>
+                                                        <option>Bangladesh</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        <h2 class="mb-24 mt-20">Account information</h2>
+                                        <div class="col-md-4 col-12 gx-15">
+                                            <div class="floating_field">
+                                                <label for="Role">Role <span class="orange-text-color">*</span></label>
+                                                <div class="custom-select">
+                                                    <select id="Role" class=" form-control v-form position-relative">
+                                                        <option>Admin</option>
+                                                        <option>Bangladesh</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12 gx-15">
+                                            <div class="floating_field">
+                                                <label for="Designation">Designation <span class="orange-text-color">*</span></label>
+                                                <input class="form-control v-form" type="text" id="Designation" placeholder="CEO">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12 gx-15">
+                                            <div class="floating_field">
+                                                <label for="Region">Region <span class="orange-text-color">*</span></label>
+                                                <div class="custom-select">
+                                                    <select id="Region" class=" form-control v-form position-relative">
+                                                        <option>Switzerland</option>
+                                                        <option>Bangladesh</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12 gx-15">
+                                            <div class="floating_field">
+                                                <label for="Email">Email <span class="orange-text-color">*</span></label>
+                                                <input class="form-control v-form" type="text" id="Email" placeholder="reaz@smlxl.com">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12 gx-15">
+                                            <div class="floating_field">
+                                                <label for="National-Registration">National Registration #<span class="orange-text-color">*</span></label>
+                                                <input class="form-control v-form" type="number" id="National-Registration" placeholder="980900900">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12 gx-15">
+                                            <div class="floating_field">
+                                                <label for="Phone-Number">Phone <span class="orange-text-color">*</span></label>
+                                                <input class="form-control v-form" type="tel" id="Phone-Number">
+                                            </div>
+                                        </div>
+                                        <h2 class="mb-20 mt-20">Email Notifications</h2>
+                                        <div class=" mb-66">
+                                            <div class=" form-check-inline  mb-2">
+                                                <input class="checkbox_mark disable--mark" type="checkbox" id="chk_all">
+                                                <label class="form-check-label" for="chk_all">All</label>
+                                            </div>
+                                            <div class=" form-check-inline mb-2">
+                                                <input class="checkbox_mark" type="checkbox" id="chk_profile" disabled>
+                                                <label class="form-check-label" for="chk_profile">Employee Profile</label>
+                                            </div>
+                                            <div class=" form-check-inline mb-2">
+                                                <input class="checkbox_mark" type="checkbox" id="chk_payslip" disabled>
+                                                <label class="form-check-label" for="chk_payslip">Employee Payslip</label>
+                                            </div>
+                                            <div class=" form-check-inline mb-2">
+                                                <input class="checkbox_mark" type="checkbox" id="chk_attendance" disabled>
+                                                <label class="form-check-label" for="chk_attendance">Employee Attendance</label>
+                                            </div>
+                                            <div class=" form-check-inline mb-2">
+                                                <input class="checkbox_mark" type="checkbox" id="chk_support" disabled>
+                                                <label class="form-check-label" for="chk_support">General Support</label>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <div class="float-end">
+                                                <button class="cancel_btn bg-transparent">Cancel</button>
+                                                <button class="blue_btn">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- MAIN SECTION END -->
+    </div>
+    <!-- Jquery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <!-- Select2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+    <!-- Telephone Jquery -->
+    <script src="assets/js/intlTelInput-jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Set div display to none
+            $(".close_btn").click(function () {
+                // $(".sidebar").css("left", "-400px");
+                $(".sidebar").removeClass("toggle_menu");
+            });
+
+            // Set div display to block
+            $(".toggle").click(function () {
+                // $(".sidebar").css("left", "0px");
+                $(".sidebar").addClass("toggle_menu");
+            });
+            $("#Nationality").select2({
+                    placeholder: "Nationality",
+                    allowClear: true
+                });
+            $("#Role").select2({
+                    placeholder: "Admin",
+                    allowClear: true
+                });
+            $("#Region").select2({
+                    placeholder: "Switzerland",
+                    allowClear: true
+                });
+            $("#Phone-Number").intlTelInput({
+                    customPlaceholder: null,
+                allowDropdown: true,
+                separateDialCode: true,
+                initialCountry: "ca",
+    
+                });
+        });
+
+    </script>
+    <!-- POPPER JS -->
+    <script src="./assets/js/popper.js"></script>
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="assets/js/script.js"></script>
+    
+
+</body>
+
+</html>
