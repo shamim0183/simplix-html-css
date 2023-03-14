@@ -19,6 +19,19 @@ $(document).ready(function () {
 
     });
 
+    $("#one-date").pDatePicker({
+        selected: new Date(2023, 1, 20), // Feb 20, 2023
+
+    });
+    $("#two-date").pDatePicker({
+        selected: new Date(2023, 1, 20), // Feb 20, 2023
+
+    });
+    $("#Date-Birth").pDatePicker({
+        selected: new Date(2023, 1, 20), // Feb 20, 2023
+
+    });
+
     // Employee table
     $(".employee_wrapper button.nav-link").on("click", function () {
         let id = $(this).attr('id');
@@ -73,17 +86,28 @@ $(document).ready(function () {
         selected: new Date(2023, 1, 20), // Feb 20, 2023
 
     });
-    $("#one-date").pDatePicker({
-        selected: new Date(2023, 1, 20), // Feb 20, 2023
 
-    });
-    $("#two-date").pDatePicker({
-        selected: new Date(2023, 1, 20), // Feb 20, 2023
-
-    });
 
     //user
 
 
 
+
+
+});
+
+// image upload 
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+            $('#imagePreview').hide();
+            $('#imagePreview').fadeIn(650);
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#imageUpload").change(function () {
+    readURL(this);
 });

@@ -21,6 +21,9 @@
     <!-- Select2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 
+    <!-- Date Picker Css -->
+    <link rel="stylesheet" href="assets/css/date-picker.css">
+
     <!-- Telephone CSS-->
     <link rel="stylesheet" href="assets/css/intlTelInput.min.css">
 
@@ -35,7 +38,9 @@
         <!-- SIDEBAR SECTION START -->
         <aside class="sidebar">
             <div class="logo">
-                <img src="./assets/image/Simplix-Logo.png" alt="simplix-logo" class="img-fluid">
+                <a href="#">
+                    <img src="./assets/image/Simplix-Logo.png" alt="simplix-logo" class="img-fluid">
+                </a>
                 <div class="close_btn">
                     <span class="material-symbols-rounded">
                         close
@@ -44,7 +49,7 @@
             </div>
             <div class="menu menu--disabled vh-100">
                 <ul>
-                    <li>
+                    <li class="active">
                         <a href="#">
                             <span class="material-symbols-rounded">
                                 person
@@ -134,6 +139,18 @@
                             <div class="user-img-upload mb-16 mx-auto">
                                 <input class="d-none" type="file"  id="upload-img" accept=".png, .jpg, .jpeg">
                                 <label class="upload-img" for="upload-img">Upload Image</label>
+                                <!--  image preview -->
+                                <div class="avatar-upload">
+                                    <div class="avatar-edit">
+                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                        <label for="imageUpload"></label>
+                                    </div>
+                                    <div class="avatar-preview">
+                                        <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  image preview -->
                             </div>
                             <div class="upload-details">
                                 <p>
@@ -184,7 +201,7 @@
                                         <div class="col-md-4 col-12 gx-15">
                                             <div class="floating_field">
                                                 <label for="Date-Birth">Date of Birth </label>
-                                                <input class="form-control v-form" type="text" id="Date-Birth">
+                                                <input class="form-control v-form" type="date" id="Date-Birth">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-12 gx-15">
@@ -287,6 +304,9 @@
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
+
+    <!-- Date picker js -->
+    <script src="assets/js/date-picker.js"></script>
 
     <!-- Select2 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
