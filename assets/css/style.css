@@ -526,6 +526,9 @@ body {
   background-repeat: no-repeat;
   background-image: url(../image/Arrow-Left.svg);
 }
+.header_right {
+  margin-right: 26px;
+}
 
 .profile {
   display: flex;
@@ -553,11 +556,11 @@ body {
   position: absolute;
   content: url(../image/down-arrow.svg) !important;
   right: -29px;
-  top: -13px;
+  top: 10px;
 }
 
 .dropdown-menu.show {
-  transform: translate3d(-185px, 25px, 0px) !important;
+  transform: translate3d(-33px, 50px, 0px) !important;
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
@@ -580,8 +583,8 @@ body {
   line-height: 17px;
 }
 .dropdown ul {
-  border: 0;
-  background-color: transparent;
+  border-radius: 16px;
+  background-color: var(--white-bg-color);
 }
 .dropdown-menu li {
   transition: all 300ms linear;
