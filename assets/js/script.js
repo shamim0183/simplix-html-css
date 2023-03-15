@@ -89,7 +89,9 @@ $(document).ready(function () {
 
 
     //user
-
+    $('#chk_all').click(function () {
+        $('#myButton').prop("disabled", !$("#myCheckbox").prop("checked"));
+    });
 
 
 
@@ -110,4 +112,28 @@ function readURL(input) {
 }
 $("#imageUpload").change(function () {
     readURL(this);
+});
+
+// user
+$(function () {
+    enable_cb();
+    $("#chk_all").click(enable_cb);
+});
+
+function enable_cb() {
+    if (this.checked) {
+        $("input.checkbox-user").attr("disabled", true);
+        $('input.checkbox-user').attr("checked").css('background-color', 'red');
+    } else {
+        $("input.checkbox-user").removeAttr("disabled");
+
+    }
+}
+$('#chk_all').click(function () {
+    $('.checkbox-user').prop('checked', this.checked);
+});
+
+$('.checkbox-user').change(function () {
+    var check = ($('.checkbox-user').filter(":checked").length == $('.checkbox-user').length);
+    $('#chk_all').prop("checked", check);
 });

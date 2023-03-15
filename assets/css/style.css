@@ -1446,3 +1446,10 @@ span.select2.select2-container.select2-container--default {
   background-repeat: no-repeat;
   background-position: center;
 }
+input[type="checkbox"] + label {
+  cursor: pointer;
+}
+input:disabled + label {
+  color: var(--third-color);
+  box-shadow: none;
+}
