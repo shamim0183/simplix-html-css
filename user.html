@@ -76,7 +76,7 @@
                 </ul>
             </div>
             <div class="sidebar_copywrite text-center">
-                <p>© Simplix Payroll 2021</p>
+                <p>&copy Simplix Payroll 2021</p>
             </div>
         </aside>
         <!-- SIDEBAR SECTION END -->
@@ -96,7 +96,7 @@
                                 aria-expanded="false">
                                 <div class="profile">
                                     <div class="profile_img">
-                                        <img class="img-fluid" src="assets/image/malepic.png" alt="person">
+                                        <img class="img-fluid" src="assets/image/femalePic.png" alt="person">
                                     </div>
                                     <div class="profile_author">
                                         <h3>Guy Hawkins</h3>
@@ -133,168 +133,181 @@
                 </div>
                 <!-- MODAL START -->
                 <!-- Button trigger modal -->
-                <div class="user_profile">
-                    <div class="user_details_background">
-                        <div class="user_details_top text-center">
-                            <div class="user-img-upload mb-16 mx-auto">
-                                <input class="d-none" type="file"  id="upload-img" accept=".png, .jpg, .jpeg">
-                                <label class="upload-img" for="upload-img">Upload Image</label>
-                                <!--  image preview -->
-                                <!-- <div class="avatar-upload">
-                                    <div class="avatar-edit">
-                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                        <label for="imageUpload"></label>
-                                    </div>
-                                    <div class="avatar-preview">
-                                        <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+                <form >
+                    <div class="user_profile">
+                        <div class="user_details_background">
+                            <div class="user_details_top text-center">
+                                <div class="user-img-upload mb-16 mx-auto">
+                                    <div class="avatar-upload">
+                                        <div class="avatar-edit">
+                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                            <label class="imageUpload " for="imageUpload">Upload Image</label>
+                                        </div>
+                                        <div class="avatar-preview">
+                                            <div id="imagePreview" >
+                                            </div>
                                         </div>
                                     </div>
-                                </div> -->
-                                <!--  image preview -->
-                            </div>
-                            <div class="upload-details">
-                                <p>
-                                    Max 5 MB, jpg or jpeg or png
-                                    photo supported only.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="divider"></div>
-        
-                        <div class="user_details_bottom">
-                            <form>
-                                <div class="user-main-info">
-
+                                    
+                                    <!-- <input class="d-none" type="file"  id="upload-img" accept=".png, .jpg, .jpeg">
+                                    <label class="upload-img" for="upload-img">Upload Image</label> -->
+                                    <!--  image preview -->
+                                    <!-- <div class="avatar-upload">
+                                        <div class="avatar-edit">
+                                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                            <label for="imageUpload"></label>
+                                        </div>
+                                        <div class="avatar-preview">
+                                            <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <!--  image preview -->
                                 </div>
-                                <h3 class="mb-24">Main information</h3>
-                                <div class="edit-info">
-                                    <div class="row ">
-                                        <div class="col-md-4 col-12 gx-15">
-                                            <div class="floating_field">
-                                                <label for="first-name">First Name <span class="orange-text-color">*</span> </label>
-                                                <input class="form-control v-form" type="text" id="first-name" placeholder="Kinanthi">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-12 gx-15">
-                                            <div class="floating_field">
-                                                <label for="middle-name">Middle Initials </label>
-                                                <input class="form-control v-form" type="text" id="middle-name">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-12 gx-15">
-                                            <div class="floating_field">
-                                                <label for="last-name">Last Name <span class="orange-text-color">*</span> </label>
-                                                <input class="form-control v-form" type="text" id="last-name" placeholder="Kinanthi">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-12 gx-15">
-                                            <div class="floating_field">
-                                                <label >Gender <span class="orange-text-color">*</span></label>
-                                                <div class="custom-select">
-                                                    <select id="gender" class=" form-control v-form position-relative">
-                                                        <option>Male</option>
-                                                        <option>Female</option>
-                                                    </select>
+                                <div class="upload-details">
+                                    <p>
+                                        Max 5 MB, jpg or jpeg or png
+                                        photo supported only.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+            
+                            <div class="user_details_bottom">
+                                <form>
+                                    <div class="user-main-info">
+    
+                                    </div>
+                                    <h3 class="mb-24">Main information</h3>
+                                    <div class="edit-info">
+                                        <div class="row ">
+                                            <div class="col-md-4 col-12 gx-15">
+                                                <div class="floating_field">
+                                                    <label for="first-name">First Name <span class="orange-text-color">*</span> </label>
+                                                    <input class="form-control v-form" type="text" id="first-name" placeholder="Kinanthi">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4 col-12 gx-15">
-                                            <div class="floating_field">
-                                                <label for="Date-Birth">Date of Birth </label>
-                                                <input class="form-control v-form" type="date" id="Date-Birth">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-12 gx-15">
-                                            <div class="floating_field">
-                                                <label for="Nationality">Nationality</label>
-                                                    <select id="Nationality" class="form-control v-form position-relative">
-                                                        <option>Nationality</option>
-                                                        <option>Bangladesh</option>
-                                                    </select>
-                                            </div>
-                                        </div>
-                                        <h2 class="mb-24 mt-20">Account information</h2>
-                                        <div class="col-md-4 col-12 gx-15">
-                                            <div class="floating_field">
-                                                <label for="Role">Role <span class="orange-text-color">*</span></label>
-                                                <div class="custom-select">
-                                                    <select id="Role" class=" form-control v-form position-relative">
-                                                        <option>Admin</option>
-                                                        <option>Bangladesh</option>
-                                                    </select>
+                                            <div class="col-md-4 col-12 gx-15">
+                                                <div class="floating_field">
+                                                    <label for="middle-name">Middle Initials </label>
+                                                    <input class="form-control v-form" type="text" id="middle-name">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4 col-12 gx-15">
-                                            <div class="floating_field">
-                                                <label for="Designation">Designation <span class="orange-text-color">*</span></label>
-                                                <input class="form-control v-form" type="text" id="Designation" placeholder="CEO">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-12 gx-15">
-                                            <div class="floating_field">
-                                                <label for="Region">Region <span class="orange-text-color">*</span></label>
-                                                <div class="custom-select">
-                                                    <select id="Region" class=" form-control v-form position-relative">
-                                                        <option>Switzerland</option>
-                                                        <option>Bangladesh</option>
-                                                    </select>
+                                            <div class="col-md-4 col-12 gx-15">
+                                                <div class="floating_field">
+                                                    <label for="last-name">Last Name <span class="orange-text-color">*</span> </label>
+                                                    <input class="form-control v-form" type="text" id="last-name" placeholder="Kinanthi">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4 col-12 gx-15">
-                                            <div class="floating_field">
-                                                <label for="Email">Email <span class="orange-text-color">*</span></label>
-                                                <input class="form-control v-form" type="text" id="Email" placeholder="reaz@smlxl.com">
+                                            <div class="col-md-4 col-12 gx-15">
+                                                <div class="floating_field">
+                                                    <label for="gender" >Gender <span class="orange-text-color">*</span></label>
+                                                    <div class="custom-select">
+                                                        <select id="gender" class=" form-control v-form position-relative">
+                                                            <option>Male</option>
+                                                            <option>Female</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4 col-12 gx-15">
-                                            <div class="floating_field">
-                                                <label for="National-Registration">National Registration #<span class="orange-text-color">*</span></label>
-                                                <input class="form-control v-form" type="number" id="National-Registration" placeholder="980900900">
+                                            <div class="col-md-4 col-12 gx-15">
+                                                <div class="floating_field">
+                                                    <label for="Date-Birth">Date of Birth </label>
+                                                    <input class="form-control v-form" type="date" id="Date-Birth" placeholder="dd--yyyy">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4 col-12 gx-15">
-                                            <div class="floating_field">
-                                                <label for="Phone-Number">Phone <span class="orange-text-color">*</span></label>
-                                                <input class="form-control v-form" type="tel" id="Phone-Number">
+                                            <div class="col-md-4 col-12 gx-15">
+                                                <div class="floating_field">
+                                                    <label for="Nationality">Nationality</label>
+                                                        <select id="Nationality" class="form-control v-form position-relative">
+                                                            <option>Nationality</option>
+                                                            <option>Bangladesh</option>
+                                                        </select>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <h2 class="mb-20 mt-20">Email Notifications</h2>
-                                        <div class=" mb-66">
-                                            <div class=" form-check-inline  mb-2">
-                                                <input class="checkbox_mark disable--mark" type="checkbox" id="chk_all">
-                                                <label class="form-check-label" for="chk_all">All</label>
+                                            <h2 class="mb-24 mt-20">Account information</h2>
+                                            <div class="col-md-4 col-12 gx-15">
+                                                <div class="floating_field">
+                                                    <label for="Role">Role <span class="orange-text-color">*</span></label>
+                                                    <div class="custom-select">
+                                                        <select id="Role" class=" form-control v-form position-relative">
+                                                            <option>Admin</option>
+                                                            <option>Bangladesh</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class=" form-check-inline mb-2">
-                                                <input class="checkbox-user" type="checkbox" id="chk_profile" >
-                                                <label class="form-check-label" for="chk_profile">Employee Profile</label>
+                                            <div class="col-md-4 col-12 gx-15">
+                                                <div class="floating_field">
+                                                    <label for="Designation">Designation <span class="orange-text-color">*</span></label>
+                                                    <input class="form-control v-form" type="text" id="Designation" placeholder="CEO">
+                                                </div>
                                             </div>
-                                            <div class=" form-check-inline mb-2">
-                                                <input class="checkbox-user" type="checkbox" id="chk_payslip" >
-                                                <label class="form-check-label" for="chk_payslip">Employee Payslip</label>
+                                            <div class="col-md-4 col-12 gx-15">
+                                                <div class="floating_field">
+                                                    <label for="Region">Region <span class="orange-text-color">*</span></label>
+                                                    <div class="custom-select">
+                                                        <select id="Region" class=" form-control v-form position-relative">
+                                                            <option>Switzerland</option>
+                                                            <option>Bangladesh</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class=" form-check-inline mb-2">
-                                                <input class="checkbox-user" type="checkbox" id="chk_attendance" >
-                                                <label class="form-check-label" for="chk_attendance">Employee Attendance</label>
+                                            <div class="col-md-4 col-12 gx-15">
+                                                <div class="floating_field">
+                                                    <label for="Email">Email <span class="orange-text-color">*</span></label>
+                                                    <input class="form-control v-form" type="text" id="Email" placeholder="reaz@smlxl.com">
+                                                </div>
                                             </div>
-                                            <div class=" form-check-inline mb-2">
-                                                <input class="checkbox-user" type="checkbox" id="chk_support" >
-                                                <label class="form-check-label" for="chk_support">General Support</label>
+                                            <div class="col-md-4 col-12 gx-15">
+                                                <div class="floating_field">
+                                                    <label for="National-Registration">National Registration #<span class="orange-text-color">*</span></label>
+                                                    <input class="form-control v-form" type="number" id="National-Registration" placeholder="980900900">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="">
-                                            <div class="float-end">
-                                                <button class="cancel_btn bg-transparent">Cancel</button>
-                                                <button class="blue_btn">Save</button>
+                                            <div class="col-md-4 col-12 gx-15">
+                                                <div class="floating_field">
+                                                    <label for="Phone-Number">Phone <span class="orange-text-color">*</span></label>
+                                                    <input class="form-control v-form" type="tel" id="Phone-Number">
+                                                </div>
+                                            </div>
+                                            <h2 class="mb-20 mt-20">Email Notifications</h2>
+                                            <div class=" mb-66">
+                                                <div class=" form-check-inline  mb-2">
+                                                    <input class="checkbox_mark disable--mark" type="checkbox" id="chk_all">
+                                                    <label class="form-check-label" for="chk_all">All</label>
+                                                </div>
+                                                <div class=" form-check-inline mb-2">
+                                                    <input class="checkbox-user" type="checkbox" id="chk_profile" >
+                                                    <label class="form-check-label" for="chk_profile">Employee Profile</label>
+                                                </div>
+                                                <div class=" form-check-inline mb-2">
+                                                    <input class="checkbox-user" type="checkbox" id="chk_payslip" >
+                                                    <label class="form-check-label" for="chk_payslip">Employee Payslip</label>
+                                                </div>
+                                                <div class=" form-check-inline mb-2">
+                                                    <input class="checkbox-user" type="checkbox" id="chk_attendance" >
+                                                    <label class="form-check-label" for="chk_attendance">Employee Attendance</label>
+                                                </div>
+                                                <div class=" form-check-inline mb-2">
+                                                    <input class="checkbox-user" type="checkbox" id="chk_support" >
+                                                    <label class="form-check-label" for="chk_support">General Support</label>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <div class="float-end">
+                                                    <button class="cancel_btn bg-transparent">Cancel</button>
+                                                    <button class="blue_btn">Save</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </main>
         <!-- MAIN SECTION END -->

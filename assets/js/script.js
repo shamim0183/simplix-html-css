@@ -97,6 +97,45 @@ $(document).ready(function () {
 
 
 });
+// $(document).ready(function () {
+//     $('#imageUpload').on('click', function () {
+//         $('.imageUpload').addClass('d-none');
+//         $('.avatar-edit').css('opacity', '1');
+//     });
+
+//     $('.avatar-upload').on('mouseenter', function () {
+//         $(this).css('opacity', '0.5');
+//         $('.imageUpload').removeClass('d-none');
+//     }).on('mouseleave', function () {
+//         $(this).css('opacity', '1');
+//         $('.imageUpload').addClass('d-none');
+//     });
+// });
+
+$(document).ready(function () {
+    var imageUploaded = false;
+
+
+    // show label with 0.5 opacity on hover if image uploaded
+    $('.avatar-upload').on('mouseenter', function () {
+        if (imageUploaded) {
+            $(this).css('opacity', '0.5');
+            $('.imageUpload').removeClass('d-none');
+        }
+    }).on('mouseleave', function () {
+        if (imageUploaded) {
+            $(this).css('opacity', '1');
+            $('.imageUpload').addClass('d-none');
+        }
+    });
+
+    // hide label when image is uploaded
+    $('#imageUpload').on('change', function () {
+        $('.imageUpload').addClass('d-none');
+        imageUploaded = true;
+    });
+});
+
 
 // image upload 
 function readURL(input) {

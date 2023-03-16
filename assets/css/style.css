@@ -697,9 +697,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .attendance_middle {
-  background: #ffffff;
-  box-shadow: 4px 4px 18px -2px rgba(231, 228, 232, 0.8);
-  border-radius: 24px;
   padding: 18px 34px 22px;
   display: flex;
   align-items: center;
@@ -874,11 +871,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   vertical-align: middle;
 }
 .employee_wrapper {
-  background: var(--white-bg-color);
   padding: 36px 29px 23px 29px;
-  border-radius: 14px;
-  margin-bottom: 24px;
-  box-shadow: 4px 4px 18px -2px rgba(231, 228, 232, 0.8);
   /* min-height: 733px; */
   min-height: 100vh;
 }
@@ -1017,10 +1010,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding-bottom: 76px;
 }
 .employee_details_background {
-  background: var(--white-bg-color);
-  box-shadow: 4px 4px 18px -2px rgba(231, 228, 232, 0.8);
-  border-radius: 24px;
-  height: 100%;
 }
 .employee_details_top {
   position: relative;
@@ -1131,7 +1120,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: var(--white-bg-color);
   box-shadow: 4px 4px 18px -2px rgba(231, 228, 232, 0.8);
   border-radius: 24px;
-  min-height: 100vh;
 }
 .user-img-upload {
   width: 96px;
@@ -1148,6 +1136,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+  cursor: pointer;
 }
 .upload-img::after {
   position: absolute;
@@ -1180,7 +1169,7 @@ input[type="checkbox"]:hover {
 }
 
 input[type="checkbox"]:checked {
-  background-color: var(--primary-color);
+  border-color: var(--primary-color);
   opacity: 1;
 }
 
@@ -1197,6 +1186,20 @@ input[type="checkbox"]:before {
   transform: rotate(45deg) translate(-50%, -50%);
   z-index: 2;
 }
+input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  border: solid var(--primary-color);
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+}
+
 .mark_btn input[type="checkbox"] {
   position: relative;
   border: 0px;
@@ -1214,7 +1217,7 @@ input[type="checkbox"]:before {
   opacity: 0;
 }
 .mark_btn input[type="checkbox"]:checked {
-  background-color: none;
+  background-color: transparent;
   opacity: 1;
 }
 .mark_btn input[type="checkbox"]:before {
@@ -1404,29 +1407,34 @@ span.select2.select2-container.select2-container--default {
 .avatar-upload .avatar-edit input {
   display: none;
 }
-.avatar-upload .avatar-edit input + label {
-  display: inline-block;
-  width: 34px;
-  height: 34px;
-  margin-bottom: 0;
+.avatar-upload .avatar-edit label {
+  position: absolute;
+  padding: 47px 15px;
+  margin-left: 14px;
+  font-size: 14px;
+  line-height: 15px;
   border-radius: 100%;
-  background: #ffffff;
-  border: 1px solid transparent;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
   cursor: pointer;
   font-weight: normal;
   transition: all 0.2s ease-in-out;
+  background: #f5f5f5;
+  border: 1px solid #cccdd0;
+  width: 96px;
+  height: 96px;
+  left: -98px;
+  top: -10px;
 }
-.avatar-upload .avatar-edit input + label:hover {
+
+/* .avatar-upload .avatar-edit input + label:hover {
   background: #f1f1f1;
   border-color: #d6d6d6;
-}
-.avatar-upload .avatar-edit input + label:after {
+} */
+.avatar-upload .avatar-edit label:after {
   content: url(../image/Camera.svg);
   position: absolute;
-  top: 10px;
-  left: 0;
-  right: 0;
+  top: 17px;
+  left: 13px;
+  right: 12px;
   text-align: center;
   margin: auto;
 }
@@ -1435,7 +1443,7 @@ span.select2.select2-container.select2-container--default {
   height: 96px;
   position: relative;
   border-radius: 100%;
-  border: 6px solid #f8f8f8;
+  border: 2px solid #0a1436;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 .avatar-upload .avatar-preview > div {

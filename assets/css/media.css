@@ -63,6 +63,19 @@
   }
   .attendance_middle {
     display: block;
+    padding: 18px 20px 22px;
+  }
+  .salary-statement {
+    padding: 48px 20px 48px 20px;
+  }
+  .employee_details_bottom {
+    padding: 32px 20px 52px;
+  }
+  .employee_wrapper {
+    padding: 36px 20px 23px 20px;
+  }
+  .user_details_bottom {
+    padding: 28px 20px 42px;
   }
 }
 @media (max-width: 767px) {
