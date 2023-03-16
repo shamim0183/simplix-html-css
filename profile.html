@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="assets/css/date-picker.css">
 
     <!-- BOOTSTRAP STYLESHEET -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
     <!-- Select2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
@@ -29,8 +29,8 @@
 
 
     <!-- CUSTOME STYLESHEET -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
 </head>
 
 <body class="primary-bg-color">
@@ -39,7 +39,7 @@
         <aside class="sidebar">
             <div class="logo">
                 <a href="#">
-                    <img src="./assets/image/Simplix-Logo.png" alt="simplix-logo" class="img-fluid">
+                    <img src="assets/image/Simplix-Logo.png" alt="simplix-logo" class="img-fluid">
                 </a>
                 <div class="close_btn">
                     <span class="material-symbols-rounded">
@@ -47,7 +47,7 @@
                     </span>
                 </div>
             </div>
-            <div class="menu menu--disabled">
+            <div class="menu menu--disabled vh-100">
                 <ul>
                     <li>
                         <a href="#">
@@ -55,8 +55,8 @@
                                 home
                             </span>Dashboard</a>
                     </li>
-                    <li>
-                        <a href="employee.html">
+                    <li class="active">
+                        <a href="profile.html">
                             <span class="material-symbols-rounded">
                                 group
                             </span>Employees</a>
@@ -74,11 +74,11 @@
                                 event_busy
                             </span>Holiday Setup</a>
                     </li>
-                    <li class="active">
-                        <a href="#">
+                    <li>
+                        <a href="user.html">
                             <span class="material-symbols-rounded">
                                 person
-                            </span>Profile</a>
+                            </span>Admins</a>
                     </li>
                     <li>
                         <a href="#">
@@ -252,7 +252,7 @@
                                                                 <div class="col-md-6 col-12 gx-15">
                                                                     <div class="floating_field">
                                                                         <label for="Email">Email</label>
-                                                                        <input class="form-control v-form" type="text" id="Email">
+                                                                        <input class="form-control v-form" type="email" id="Email">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6 col-12 gx-15">
@@ -390,7 +390,7 @@
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group profile_form">
                                                     <label for="Email">Nationality</label>
-                                                    <input type="text" class="form-control v-form" placeholder="guyhaw@gmail.com" id="email">
+                                                    <input type="email" class="form-control v-form" placeholder="guyhaw@gmail.com" id="email">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-12">
@@ -415,84 +415,164 @@
                                 <div class="salary-statement">
                                     <h2 class="mb-36">Salary Statement</h2>
                                     <div class="salary-statement-details">                        
-                                        <ul >
+                                        <ul class="" >
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>Basic Payment</p>
-                                                <p class="green-text-color fw-500">BDs$ 2,370</p>
+                                                <span>Basic Payment</span>
+                                                <span class="green-text-color fw-500">BDs$ 2,370</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>Dearness Allowance</p>
-                                                <p class="green-text-color fw-500">BDs$ 474</p>
+                                                <span>Dearness Allowance</span>
+                                                <span class="green-text-color fw-500">BDs$ 474</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>House Rent Allowance</p>
-                                                <p class="green-text-color fw-500">BDs$ 1,185</p>
+                                                <span>House Rent Allowance</span>
+                                                <span class="green-text-color fw-500">BDs$ 1,185</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>Conveyance</p>
-                                                <p class="green-text-color fw-500">BDs$ 1,420</p>
+                                                <span>Conveyance</span>
+                                                <span class="green-text-color fw-500">BDs$ 1,420</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>Medical Expenses</p>
-                                                <p class="green-text-color fw-500">BDs$ 0</p>
+                                                <span>Medical Expenses</span>
+                                                <span class="green-text-color fw-500">BDs$ 0</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>Special</p>
-                                                <p class="green-text-color fw-500">BDs$ 1,037</p>
+                                                <span>Special</span>
+                                                <span class="green-text-color fw-500">BDs$ 1,037</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>Bonus</p>
-                                                <p class="green-text-color fw-500">BDs$ 1,310</p>
+                                                <span>Bonus</span>
+                                                <span class="green-text-color fw-500">BDs$ 1,310</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>TA</p>
-                                                <p class="green-text-color fw-500">BDs$ 0</p>
+                                                <span>TA</span>
+                                                <span class="green-text-color fw-500">BDs$ 0</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>P.A.Y.E</p>
-                                                <p class="third-text-color fw-500">-BDs$ 180</p>
+                                                <span>P.A.Y.E</span>
+                                                <span class="third-text-color fw-500">-BDs$ 180</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>N.I.S</p>
-                                                <p class="third-text-color fw-500">-BDs$ 170</p>
+                                                <span>N.I.S</span>
+                                                <span class="third-text-color fw-500">-BDs$ 170</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>Profession Tax</p>
-                                                <p class="third-text-color fw-500">BDs$ 0</p>
+                                                <span>Profession Tax</span>
+                                                <span class="third-text-color fw-500">BDs$ 0</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>TDS</p>
-                                                <p class="third-text-color fw-500">-BDs$ 700</p>
+                                                <span>TDS</span>
+                                                <span class="third-text-color fw-500">-BDs$ 700</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>Staff Loan</p>
-                                                <p class="third-text-color fw-500">-BDs$ 0</p>
+                                                <span>Staff Loan</span>
+                                                <span class="third-text-color fw-500">-BDs$ 0</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>Mortgage</p>
-                                                <p class="third-text-color fw-500">-BDs$ 0</p>
+                                                <span>Mortgage</span>
+                                                <span class="third-text-color fw-500">-BDs$ 0</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>Pension</p>
-                                                <p class="third-text-color fw-500">-BDs$ 0</p>
+                                                <span>Pension</span>
+                                                <span class="third-text-color fw-500">-BDs$ 0</span>
                                             </li>
                                             <li class="d-flex justify-content-between mb-27">
-                                                <p>Health Insurance</p>
-                                                <p class="third-text-color fw-500">-BDs$ 0</p>
+                                                <span>Health Insurance</span>
+                                                <span class="third-text-color fw-500">-BDs$ 0</span>
                                             </li>
                                             <li class="d-flex justify-content-between green-bg mb-12 green-text-color ">
-                                               <p class="fw-500">Basic Payment</p>
-                                               <p class="fw-500">BDs$ 2,370</p>
+                                               <span class="fw-500">Basic Payment</span>
+                                               <span class="fw-500">BDs$ 2,370</span>
                                             </li>
                                             <li class="d-flex justify-content-between red-bg mb-12 third-text-color ">
-                                               <p class="fw-500">Basic Payment</p>
-                                               <p class="fw-500">BDs$ 2,370</p>
+                                               <span class="fw-500">Basic Payment</span>
+                                               <span class="fw-500">BDs$ 2,370</span>
                                             </li>
                                             <li class="d-flex justify-content-between blue-bg mb-12 secondary-text-color ">
-                                               <p class="fw-500">Basic Payment</p>
-                                               <p class="fw-500">BDs$ 2,370</p>
+                                               <span class="fw-500">Basic Payment</span>
+                                               <span class="fw-500">BDs$ 2,370</span>
                                             </li>
                                         </ul>
+                                        <table class="table profile-table table.responsive d-none">
+                                        
+                                            <tr class="mb-27">
+                                                <td>Basic Payment</th>
+                                                <td class="green-text-color fw-500">BDs$ 2,370</td>
+                                            </tr>
+                                            <tr class="green-text">
+                                                <td>Dearness Allowance</td>
+                                                <td>BDs$ 474</td>
+                                            </tr>
+                                            <tr class="green-text">
+                                                <td>House Rent Allowance</td>
+                                                <td>BDs$ 1,185</td>
+                                            </tr>
+                                            <tr class="green-text">
+                                                <td>Conveyance</td>
+                                                <td>BDs$ 1,420</td>
+                                            </tr>
+                                            <tr class="green-text">
+                                                <td>Medical Expenses</td>
+                                                <td>BDs$ 0</td>
+                                            </tr>
+                                            <tr class="green-text">
+                                                <td>Special</td>
+                                                <td>BDs$ 1,037</td>
+                                            </tr>
+                                            <tr class="green-text">
+                                                <td>Bonus</td>
+                                                <td>BDs$ 1,310</td>
+                                            </tr>
+                                            <tr class="green-text">
+                                                <td>TA</td>
+                                                <td>BDs$ 0</td>
+                                            </tr>
+                                            <tr class="red-text">
+                                                <td>P.A.Y.E</td>
+                                                <td>-BDs$ 180</td>
+                                            </tr>
+                                            <tr class="red-text">
+                                                <td>N.I.S</td>
+                                                <td>-BDs$ 170</td>
+                                            </tr>
+                                            <tr class="red-text">
+                                                <td>Profession Tax</td>
+                                                <td>-BDs$ 0</td>
+                                            </tr>
+                                            <tr class="red-text">
+                                                <td>TDS</td>
+                                                <td>-BDs$ 700</td>
+                                            </tr>
+                                            <tr class="red-text">
+                                                <td>Staff Loan</td>
+                                                <td>-BDs$ 0</td>
+                                            </tr>
+                                            <tr class="red-text">
+                                                <td>Mortgage</td>
+                                                <td>-BDs$ 0</td>
+                                            </tr>
+                                            <tr class="red-text">
+                                                <td>Pension</td>
+                                                <td>-BDs$ 0</td>
+                                            </tr>
+                                            <tr class="red-text">
+                                                <td>Health Insurance</td>
+                                                <td>-BDs$ 0</td>
+                                            </tr>
+                                            <tr class="green-background mb-3">
+                                                <td>Health Insurance</td>
+                                                <td>-BDs$ 0</td>
+                                            </tr>
+                                            <tr class="red-background">
+                                                <td>Health Insurance</td>
+                                                <td>-BDs$ 0</td>
+                                            </tr>
+                                            <tr class="blue-background">
+                                                <td>Health Insurance</td>
+                                                <td>-BDs$ 0</td>
+                                            </tr>
+                                        
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -519,11 +599,11 @@
     <!-- Date picker js -->
     <script src="assets/js/date-picker.js"></script>
     <!-- POPPER JS -->
-    <script src="./assets/js/popper.js"></script>
+    <script src="assets/js/popper.js"></script>
 
     <!-- BOOTSTRAP JAVASCRIPT -->
 
-    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
     <!-- Custom Js -->
     <script src="assets/js/script.js"></script>

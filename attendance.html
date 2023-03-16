@@ -19,12 +19,12 @@
     <link rel="stylesheet" href="assets/css/date-picker.css">
 
     <!-- BOOTSTRAP STYLESHEET -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
 
     <!-- CUSTOME STYLESHEET -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
 </head>
 
 <body class="primary-bg-color">
@@ -32,7 +32,7 @@
         <!-- SIDEBAR SECTION START -->
         <aside class="sidebar">
             <div class="logo">
-                <a href="#"><img src="./assets/image/Simplix-Logo.png" alt="simplix-logo" class="img-fluid"></a>
+                <a href="#"><img src="assets/image/Simplix-Logo.png" alt="simplix-logo" class="img-fluid"></a>
                 <div class="close_btn">
                     <span class="material-symbols-rounded">
                         close
@@ -42,10 +42,16 @@
             <div class="menu menu--disabled vh-100">
                 <ul>
                     <li>
+                        <a href="#">
+                            <span class="material-symbols-rounded">
+                                home
+                            </span>Dashboard</a>
+                    </li>
+                    <li >
                         <a href="profile.html">
                             <span class="material-symbols-rounded">
-                                person
-                            </span>Profile</a>
+                                group
+                            </span>Employees</a>
                     </li>
                     <li>
                         <a href="employee.html">
@@ -54,16 +60,29 @@
                             </span>Employee Payslip</a>
                     </li>
                     <li class="active">
-                        <a  href="#">
+                        <a href="attendance.html">
                             <span class="material-symbols-rounded">
                                 schedule
                             </span>Attendance
                         </a>
                     </li>
                     <li>
-                        <a href="#"><span class="material-symbols-rounded">
-                            flag
-                        </span>Support</a>
+                        <a href="#">
+                            <span class="material-symbols-rounded">
+                                event_busy
+                            </span>Holiday Setup</a>
+                    </li>
+                    <li>
+                        <a href="user.html">
+                            <span class="material-symbols-rounded">
+                                person
+                            </span>Admins</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-symbols-rounded">
+                                settings
+                            </span>Payroll Options</a>
                     </li>
                 </ul>
             </div>
@@ -77,10 +96,13 @@
         <main class="main_section">
             <div class="main_header">
                 <header class="header_section">
-                    <div class="header_left">
+                    <div class="header_left d-flex">
                         <span class="material-symbols-rounded toggle">
                             menu
                         </span>
+                        <div class="back">
+                            <a class="d-inline-block" href="#">Back</a>
+                        </div>
                     </div>
                     <div class="header_right">
                         <div class="dropdown ">
@@ -141,7 +163,7 @@
                     <!-- MODAL START -->
                     <!-- Button trigger modal -->
                     <button type="button" class="bg-transparent calender_btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <img src="./assets/image/calender.svg" alt="">
+                        <img src="assets/image/calender.svg" alt="">
                     </button>
                     
                     <!-- Modal -->
@@ -194,7 +216,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="attendance_right mr-76">
+                    <div class="attendance_right">
                         <div class="d-flex gap-20 text-center justify-content-md-center flex-md-row flex-column">
                             <div class="time_count ">
                                 <span class="mb-13  d-inline-block">Working Days</span>
@@ -444,16 +466,22 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
 
+    <!-- Select2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+    <!-- Telephone Jquery -->
+    <script src="assets/js/intlTelInput-jquery.min.js"></script>
+
     <!-- Date picker js -->
     <script src="assets/js/date-picker.js"></script>
 
     
     <!-- POPPER JS -->
-    <script src="./assets/js/popper.js"></script>
+    <script src="assets/js/popper.js"></script>
 
     <!-- BOOTSTRAP JAVASCRIPT -->
 
-    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
     <!-- Custom Js -->
     <script src="assets/js/script.js"></script>

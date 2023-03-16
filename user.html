@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!-- BOOTSTRAP STYLESHEET -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
     <!-- Select2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
@@ -29,8 +29,8 @@
 
 
     <!-- CUSTOME STYLESHEET -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
 </head>
 
 <body class="primary-bg-color">
@@ -39,7 +39,7 @@
         <aside class="sidebar">
             <div class="logo">
                 <a href="#">
-                    <img src="./assets/image/Simplix-Logo.png" alt="simplix-logo" class="img-fluid">
+                    <img src="assets/image/Simplix-Logo.png" alt="simplix-logo" class="img-fluid">
                 </a>
                 <div class="close_btn">
                     <span class="material-symbols-rounded">
@@ -49,11 +49,17 @@
             </div>
             <div class="menu menu--disabled vh-100">
                 <ul>
-                    <li class="active">
+                    <li>
                         <a href="#">
                             <span class="material-symbols-rounded">
-                                person
-                            </span>Profile</a>
+                                home
+                            </span>Dashboard</a>
+                    </li>
+                    <li >
+                        <a href="profile.html">
+                            <span class="material-symbols-rounded">
+                                group
+                            </span>Employees</a>
                     </li>
                     <li>
                         <a href="employee.html">
@@ -69,9 +75,22 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"><span class="material-symbols-rounded">
-                                flag
-                            </span>Support</a>
+                        <a href="#">
+                            <span class="material-symbols-rounded">
+                                event_busy
+                            </span>Holiday Setup</a>
+                    </li>
+                    <li class="active">
+                        <a href="user.html">
+                            <span class="material-symbols-rounded">
+                                person
+                            </span>Admins</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-symbols-rounded">
+                                settings
+                            </span>Payroll Options</a>
                     </li>
                 </ul>
             </div>
@@ -165,10 +184,11 @@
                                     <!--  image preview -->
                                 </div>
                                 <div class="upload-details">
-                                    <p>
+                                    <p class="mx-w-182 mx-auto">
                                         Max 5 MB, jpg or jpeg or png
                                         photo supported only.
                                     </p>
+                                    <p class="vfw-500 primary-text-color d-none">Change Picture</p>
                                 </div>
                             </div>
                             <div class="divider"></div>
@@ -257,7 +277,7 @@
                                             <div class="col-md-4 col-12 gx-15">
                                                 <div class="floating_field">
                                                     <label for="Email">Email <span class="orange-text-color">*</span></label>
-                                                    <input class="form-control v-form" type="text" id="Email" placeholder="reaz@smlxl.com">
+                                                    <input class="form-control v-form" type="email" id="Email" placeholder="reaz@smlxl.com">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-12 gx-15">
@@ -363,11 +383,11 @@
 
     </script>
     <!-- POPPER JS -->
-    <script src="./assets/js/popper.js"></script>
+    <script src="assets/js/popper.js"></script>
 
     <!-- BOOTSTRAP JAVASCRIPT -->
 
-    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
     <!-- Custom Js -->
     <script src="assets/js/script.js"></script>
