@@ -12,6 +12,12 @@
 .calender_btn {
   display: none;
 }
+@media (min-width: 1200px) {
+  .modal-xl {
+    max-width: 980px;
+  }
+}
+
 @media (max-width: 1200px) {
   .calender_btn {
     display: block;
@@ -49,6 +55,10 @@
     margin-right: 10px;
     cursor: pointer;
   }
+  .modal-lg,
+  .modal-xl {
+    max-width: 980px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -81,6 +91,17 @@
   .user_details_bottom {
     padding: 28px 20px 42px;
   }
+
+  .modal_profile {
+    padding: 30px 20px 0px;
+  }
+  .modal-dialog {
+    max-width: 800px;
+  }
+
+  .modal-content {
+    margin: 0 20px;
+  }
 }
 @media (max-width: 767px) {
   .main_body {
@@ -93,15 +114,17 @@
   .title h3 {
     font-size: 24px;
   }
-  .modal-content {
-    margin: 0 20px;
-  }
-  .modal_profile {
-    padding: 30px 20px 0px;
-  }
 }
 @media (max-width: 576px) {
   .time_count {
     min-width: 100%;
+  }
+}
+@media (max-width: 376px) {
+  input[type="file"] {
+    font-size: 12px;
+  }
+  .Profile-Picture::after {
+    right: 8px;
   }
 }
