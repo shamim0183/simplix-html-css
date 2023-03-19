@@ -52,6 +52,10 @@
 }
 
 @media (max-width: 991px) {
+  .date-picker-date-container {
+    left: -10px;
+    z-index: 3;
+  }
   .attendance_left {
     margin-bottom: 20px;
   }
@@ -79,6 +83,9 @@
   }
 }
 @media (max-width: 767px) {
+  .main_body {
+    padding: 0px 10px 0px 10px !important;
+  }
   .employee_wrapper .nav-item {
     margin-left: 0 !important;
     margin-bottom: 10px;
